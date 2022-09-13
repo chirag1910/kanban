@@ -1,0 +1,45 @@
+.card{
+    transition: transform .3s ease-in-out;
+    position: relative;
+    border-left: 5px solid #0d6efd;
+    width: 20rem;
+    display: inline-block;
+}
+.card:hover{
+    z-index: 10;
+    transform: scale(1.05);
+}
+
+.card a{
+    text-decoration: none;
+    color: initial;
+}
+
+.card i.fa{
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+.card i.fa:hover{
+    color: red;
+}
+
+@media only screen and (max-width: 1090px){
+    .card{
+        width: 16rem;
+    }
+}
+
+@media only screen and (max-width: 790px){
+    .card{
+        width: 13rem;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .card{
+        width: 100%;
+        display: block;
+    }
+}

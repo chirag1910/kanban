@@ -1,0 +1,9 @@
+<div class="container mt-3">
+    <form #f="ngForm" (ngSubmit)="createColumn()">
+        <div class="input-group mb-3 mt-2 shadow">
+            <input type="text" class="form-control" placeholder="Column title" aria-label="Column name"
+                aria-describedby="button-addon2" id="newBoard" name="newBoard" [(ngModel)]="name" required>
+            <button class="btn btn-outline-primary" type="submit" id="button-addon2" [disabled]="!f.valid">Create</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+<div class="alert alert-primary" role="alert">
+    Data is stored in local storage and will be lost if browser data is cleared.
+</div>
+
+<app-create-new-board (onCreateBoard)="createBoard($event)"></app-create-new-board>
+<div class="container mt-3 mb-5">
+    <h2 class="h2">My boards</h2>
+    <div *ngIf="boards.length">
+        <app-my-boards *ngFor="let board of boards" [board]="board" (onDeleteBoard)="deleteBoard(board)">
+        </app-my-boards>
+    </div>
+    <h5 class="h5 mt-3 text-center" *ngIf="!boards.length">No boards created yet!</h5>
+</div>

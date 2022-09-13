@@ -1,0 +1,9 @@
+<app-create-column (onCreateColumn)="createColumn($event)"></app-create-column>
+<div class="container"  *ngIf="!columns.length">
+    <h5 class="h5 mt-5 text-center">No titles created yet!</h5>
+</div>
+<div class="container column-group" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)" cdkDropListGroup *ngIf="columns.length">
+    <app-column *ngFor="let column of columns" [column]="column" [boardName]="boardName" (onDeleteColumn)="deleteColumn(column)">
+    </app-column>
+</div>
+

@@ -1,0 +1,9 @@
+<div class="card mt-3 me-3 shadow">
+    <a [routerLink]="['board']" [queryParams]="{name: board.name}">
+        <div class="card-body">
+            <h5 class="card-title">{{board.name}}</h5>
+            <p class="card-text">Created on: {{board.createdOn | date:'dd-MM-yyyy'}}</p>
+        </div>
+    </a>
+    <i class="fa fa-times" aria-hidden="true" (click)="deleteBoard(board)"></i>
+</div>

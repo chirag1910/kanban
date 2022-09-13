@@ -1,0 +1,10 @@
+<div class="container mt-3">
+    <form #f="ngForm" (ngSubmit)="createBoard()">
+        <label class="h2" for="newBoard">Create new</label>
+        <div class="input-group mb-4 mt-2 shadow">
+            <input type="text" class="form-control" placeholder="Board name" aria-label="Board name"
+                aria-describedby="button-addon2" id="newBoard" name="newBoard" [(ngModel)]="name" required>
+            <button class="btn btn-outline-primary" type="submit" id="button-addon2" [disabled]="!f.valid">Create</button>
+        </div>
+    </form>
+</div>

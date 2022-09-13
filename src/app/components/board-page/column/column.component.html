@@ -1,0 +1,13 @@
+<div class="card mt-2 me-3 shadow" cdkDrag>
+        <div class="card-body" 
+            cdkDropList
+            [cdkDropListData]="listItems"
+            (cdkDropListDropped)="drop($event)">
+            <h5 class="card-title">{{column.name}}</h5>
+            <hr>
+            <app-create-list-item (onCreateListItem)="createListItem($event)"></app-create-list-item>
+            <app-list-item *ngFor="let listItem of listItems" [listItem]="listItem" (onDeleteListItem)="deleteListItem($event)"></app-list-item>
+            <h6 class="h7 mt-1 text-center" *ngIf="!listItems.length">No items added!</h6>
+        </div>
+    <i class="fa fa-times" aria-hidden="true" (click)="deleteColumn(column)"></i>
+</div>
